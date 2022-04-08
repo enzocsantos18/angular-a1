@@ -22,6 +22,8 @@ export class EnzoListaComponent implements OnInit {
   }
 
   cadastrar() {
+    this.codigo = this.codigo.replace(' ', '').toUpperCase();
+
     if (
       !this.codigo ||
       !this.nome ||
@@ -32,8 +34,6 @@ export class EnzoListaComponent implements OnInit {
       alert('Preencha todos os campos');
       return;
     }
-
-    this.codigo = this.codigo.replace(' ', '').toUpperCase();
 
     this.disciplinasService.cadastrar({
       codigo: this.codigo,
