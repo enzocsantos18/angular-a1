@@ -1,3 +1,9 @@
-<h2>{{ disciplina.codigo }} - {{ disciplina.nome }}</h2>
-<p>{{ disciplina.diaDaSemana }} - {{ disciplina.horario }}</p>
-<p>{{ disciplina.ementa }}</p>
+<div *ngIf="disciplina">
+  <h2>{{ disciplina.codigo }} - {{ disciplina.nome }}</h2>
+  <p>{{ disciplina.diaDaSemana }} - {{ disciplina.horario }}</p>
+  <p>{{ disciplina.ementa }}</p>
+</div>
+
+<div *ngIf="!disciplina">
+  <h2>Erro</h2>
+</div>
