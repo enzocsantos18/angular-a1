@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { EnzoComponent } from './enzo/enzo.component';
 import { EnzoListaComponent } from './enzo-lista/enzo-lista.component';
 import { EnzoDisciplinasServiceService } from './enzo-disciplinas-service.service';
+import { EnzoDetalhesComponent } from './enzo-detalhes/enzo-detalhes.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { EnzoDisciplinasServiceService } from './enzo-disciplinas-service.servic
     RouterModule.forRoot([
       { path: 'enzo', component: EnzoComponent },
       { path: 'disciplinas', component: EnzoListaComponent },
+      { path: 'disciplinas/:codigo', component: EnzoDetalhesComponent },
     ]),
   ],
   declarations: [
@@ -23,6 +25,7 @@ import { EnzoDisciplinasServiceService } from './enzo-disciplinas-service.servic
     HelloComponent,
     EnzoComponent,
     EnzoListaComponent,
+    EnzoDetalhesComponent,
   ],
   providers: [EnzoDisciplinasServiceService],
   bootstrap: [AppComponent],

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class EnzoDisciplinasServiceService {
-  displinasCursadas: disciplina[] = [
+  disciplinasCursadas: disciplina[] = [
     {
       codigo: 'ISD002A',
       nome: 'Arquitetura Orientada a Serviços',
@@ -40,9 +40,13 @@ export class EnzoDisciplinasServiceService {
   constructor() {}
 
   excluir(disciplina: string) {
-    this.displinasCursadas = this.displinasCursadas.filter(
+    this.disciplinasCursadas = this.disciplinasCursadas.filter(
       (d) => d.codigo !== disciplina
     );
+  }
+
+  get(disciplina: string) {
+    return this.disciplinasCursadas.find((d) => d.codigo == disciplina);
   }
 }
 
