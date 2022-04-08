@@ -38,6 +38,12 @@ export class EnzoDisciplinasServiceService {
   ];
 
   constructor() {}
+
+  excluir(disciplina: string) {
+    this.displinasCursadas = this.displinasCursadas.filter(
+      (d) => d.codigo !== disciplina
+    );
+  }
 }
 
 interface disciplina {

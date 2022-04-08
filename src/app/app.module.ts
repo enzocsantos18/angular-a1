@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { RouterModule } from '@angular/router';
 import { EnzoComponent } from './enzo/enzo.component';
 import { EnzoListaComponent } from './enzo-lista/enzo-lista.component';
+import { EnzoDisciplinasServiceService } from './enzo-disciplinas-service.service';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { EnzoListaComponent } from './enzo-lista/enzo-lista.component';
     EnzoComponent,
     EnzoListaComponent,
   ],
+  providers: [EnzoDisciplinasServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

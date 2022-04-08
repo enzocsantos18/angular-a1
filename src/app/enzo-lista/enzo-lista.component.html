@@ -7,5 +7,15 @@
     <th>Dia Semana</th>
     <th>Horário</th>
     <th>Detalhes</th>
+    <th>Excluir</th>
+  </tr>
+
+  <tr *ngFor="let disciplina of disciplinasService.displinasCursadas">
+    <td>{{ disciplina.codigo }}</td>
+    <td>{{ disciplina.nome }}</td>
+    <td>{{ disciplina.diaDaSemana }}</td>
+    <td>{{ disciplina.horario }}</td>
+    <td><a href="#">Ver detalhes</a></td>
+    <td><button (click)="excluir(disciplina.codigo)">Excluir</button></td>
   </tr>
 </table>
