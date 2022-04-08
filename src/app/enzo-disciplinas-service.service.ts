@@ -28,7 +28,7 @@ export class EnzoDisciplinasServiceService {
         'Apresentar tecnologias ainda não estudadas ou aprofundar algum tema já visto definido pela coordenadoria do curso em cada unidade. Objetivos específicos. Estudar e aplicar tecnologias de uso corrente na região na qual o curso de insere ou de interesse para o desenvolvimento profissional dos estudantes ou desenvolver temas que aprofundem algum conhecimento já estudado',
     },
     {
-      codigo: 'ISD002A',
+      codigo: 'TTG401A',
       nome: 'Projeto de Trabalho de Graduação em Sistemas para Internet I',
       diaDaSemana: 'Sábado',
       horario: '11:30 - 12:30',
