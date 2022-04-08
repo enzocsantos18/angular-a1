@@ -11,7 +11,36 @@ export class EnzoListaComponent implements OnInit {
 
   ngOnInit() {}
 
+  codigo: string;
+  nome: string;
+  diaDaSemana: string;
+  horario: string;
+  ementa: string;
+
   excluir(disciplina: string) {
     this.disciplinasService.excluir(disciplina);
+  }
+
+  cadastrar() {
+    if (
+      !this.codigo ||
+      !this.nome ||
+      !this.diaDaSemana ||
+      !this.horario ||
+      !this.ementa
+    ) {
+      alert('Preencha todos os campos');
+      return;
+    }
+
+    this.codigo = this.codigo.replace(' ', '').toUpperCase();
+
+    this.disciplinasService.cadastrar({
+      codigo: this.codigo,
+      nome: this.nome,
+      diaDaSemana: this.diaDaSemana,
+      horario: this.horario,
+      ementa: this.ementa,
+    });
   }
 }

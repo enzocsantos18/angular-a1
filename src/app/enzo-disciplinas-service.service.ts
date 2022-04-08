@@ -48,6 +48,10 @@ export class EnzoDisciplinasServiceService {
   get(disciplina: string) {
     return this.disciplinasCursadas.find((d) => d.codigo == disciplina);
   }
+
+  cadastrar(disciplina: disciplina) {
+    this.disciplinasCursadas.push(disciplina);
+  }
 }
 
 interface disciplina {
